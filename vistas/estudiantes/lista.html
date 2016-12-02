@@ -1,0 +1,89 @@
+<div class="ea-docente-container">
+  <div class="d-container">
+    <table>
+      <thead>
+        <tr>
+            <th data-field="id">#</th>
+            <th data-field="id">Fotografiá</th>
+              <th data-field="id">Nombre</th>
+              <th data-field="name">Curso</th>
+              <th data-field="price">Acudiente</th>
+              <th data-field="price">Celular</th>
+              <th data-field="name">Correo</th>
+              <th data-field="price">Opciones</th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><img src="images/niño1.jpg" alt="" draggable="false"></td>
+          <td>Mario Henriquez</td>
+          <td>Párvulos</td>
+          <td>Luis Diaz</td>
+          <td>300 3354576</td>
+          <td>luisdias@gmail.com</td>
+          <td>
+            <a id="ver-ficha" class="waves-effect waves-light btn">Ver Ficha</a>
+            <a id="eliminar" class="waves-effect waves-light btn red">Eliminar</a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><img src="images/niño2.jpg" alt="" draggable="false"></td>
+          <td>Pepe Diaz</td>
+          <td>Párvulos</td>
+          <td>Carlos Azaustre</td>
+          <td>300 3359878</td>
+          <td>carlos123@gmail.com</td>
+          <td>
+            <a id="ver-ficha" class="waves-effect waves-light btn">Ver Ficha</a>
+            <a id="eliminar" class="waves-effect waves-light btn red">Eliminar</a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><img src="images/niño.jpg" alt="" draggable="false"></td>
+          <td>Juan Costa</td>
+          <td>Párvulos</td>
+          <td>Luis Costa</td>
+          <td>301 3454996</td>
+          <td>costa21@gmail.com</td>
+          <td>
+            <a id="ver-ficha" class="waves-effect waves-light btn">Ver Ficha</a>
+            <a id="eliminar" class="waves-effect waves-light btn red">Eliminar</a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><img src="images/nino3.png" alt="" draggable="false"></td>
+          <td>Keisy Anaya</td>
+          <td>Párvulos</td>
+          <td>Edwin Anaya</td>
+          <td>310 6789387</td>
+          <td>edwink@gmail.com</td>
+          <td>
+            <a id="ver-ficha" class="waves-effect waves-light btn">Ver Ficha</a>
+            <a id="eliminar" class="waves-effect waves-light btn red">Eliminar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script>
+  $( "#ver-ficha" ).click(function(){
+    $('.main').load('vistas/estudiantes/fichaEstudiante.html');
+  });
+</script>
+</div>
+<script>
+  //tags
+  $( "#c-admision" ).click(function(){
+    $('.aside').load('vistas/tablero/menu2.html');
+    $('.main').load('vistas/tablero/base.html');
+    $('.nav .menu1').removeClass('active1');
+        $('#tablero').addClass('active1');
+  });
+</script>

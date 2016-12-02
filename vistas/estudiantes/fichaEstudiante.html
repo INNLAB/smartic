@@ -1,0 +1,154 @@
+<div class="ea-admin-container">
+	<form>
+		<div class="ad-container">
+			<div class="ad-datos-personales-estudiante">
+				<div class="ad-title">
+					<span>Datos Personales</span>
+				</div>
+				<div class="ea-ad-container">
+					<div class="ad-personales">
+		        		<input placeholder="Primer Nombre" id="e-Pnombre" type="text" value="Mario">
+		        		<input placeholder="Segundo Nombre" id="e-Snombre" type="text" value="Luis">
+		        		<input placeholder="Primer Apellido" id="e-Papellido" type="text" value="Henriquez">
+		        		<input placeholder="Segundo Apellido" id="e-Sapellido" type="text" value="Donado">
+		        		<select>
+					    	<option value="" disabled selected>Tipo de documento</option>
+					    	<option value="1">Registro Civil</option>
+					    	<option value="2">Tarjeta de Identidad</option>
+					    	<option value="3">Cedula de Ciudadania</option>
+					    </select>
+		        		<input placeholder="Numero de documento" id="e-Dnumero" type="text">
+		        		<input placeholder="Fecha de Nacimiento" id="e-Fnacimiento" type="date" class="datepicker">
+		        		<div class="p-input">
+		        			<p>10 años </p>
+		        			<p> <span> Sexo: </span>
+						      <input name="group1" type="radio" id="e-Cm" />
+						      <label for="e-Cm">M</label>
+						      <input name="group1" type="radio" id="e-Cf" />
+						      <label for="e-Cf">F</label>
+						    </p>
+		        		</div>
+		        		<input placeholder="Ciudad de Nacimiento" id="e-Cnacimiento" type="text">
+		        		<input placeholder="Dirección" id="e-direccion" type="text">
+		        		<input placeholder="Estrato" id="e-estrato" type="text">
+		        		<div class="switch">
+						    <label>
+						      	Pre-matricula
+						      	<input type="checkbox">
+						      	<span class="lever"></span>
+						      	Matricula
+						    </label>
+						</div>
+		        	</div>
+					<div class="ad-foto">
+						<script src="js/upload.js"></script>
+			            <div id="image-preview" style="background: url(images/niño1.jpg)">
+			                <label for="image-upload" id="image-label"><i class="material-icons">camera_alt</i></label>	
+			                <input type="file" name="image" id="image-upload" />
+			            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ad-container">
+			<div class="ad-datos-personales-estudiante">
+				<div class="ad-title">
+					<span>Datos Acudiente</span>
+				</div>
+				<div class="ea-ad-container">
+					<div class="ad-acudiente">
+		        		<input placeholder="Nombres" id="e-Anombres" type="text">
+		        		<input placeholder="Apellidos" id="e-Aapellidos" type="text">
+		        		<select>
+					    	<option value="" disabled selected>Tipo de documento</option>
+					    	<option value="1">Cedula de Ciudadania</option>
+					    	<option value="2">Contraseña</option>
+					    	<option value="3">Pasaporte</option>
+					    </select>
+		        		<input placeholder="Numero de Documento" id="e-ADnumero" type="text">
+		        		<input placeholder="Parentesco" id="e-Aparentesco" type="text">
+		        		<input placeholder="Dirección" id="e-Aparentesco" type="text">
+		        		<input placeholder="Teléfono" id="e-Atelefono" type="text">
+		        		<input placeholder="Celular" id="e-Acelular" type="text">
+		        		<input placeholder="Correo Electronico" id="e-Acorreo" type="text">
+		        		<div class="p-input1">
+		        			<p> <span> Sexo: </span>
+						      <input name="group2" type="radio" id="e-ACm" />
+						      <label for="e-ACm">M</label>
+						      <input name="group2" type="radio" id="e-ACf" />
+						      <label for="e-ACf">F</label>
+						    </p>
+		        		</div>
+		        		<input placeholder="Fecha de Nacimiento" id="e-AFnacimiento" type="date" class="datepicker">
+		        		<div class="p-input2">
+		        			<p>25 años </p>
+		        			<p>
+						      <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+						      <label for="filled-in-box">Vive con Él</label>
+						    </p>
+		        		</div>
+		        		<select>
+					    	<option value="" disabled selected>Estado Civil</option>
+					    	<option value="1">Soltero</option>
+					    	<option value="2">Casado</option>
+					    	<option value="3">Union Libre</option>
+					    	<option value="3">Divorciado</option>
+					    	<option value="3">Viudo</option>
+					    </select>
+					    <select>
+					    	<option value="" disabled selected>Nivel Educativo</option>
+					    	<option value="1">Sin estudios</option>
+					    	<option value="2">Educacion Primaria</option>
+					    	<option value="3">Educacion Secundaria</option>
+					    	<option value="2">Educacion Tecnica</option>
+					    	<option value="3">Educacion Universitaria</option>
+					    </select>
+					    <input placeholder="Teléfono" id="e-Atelefono" type="text">
+		        	</div>
+				</div>
+			</div>
+		</div>
+		<div class="ad-container">
+			<div class="ad-datos-personales-estudiante">
+				<div class="ad-title">
+					<span>Datos Academicos</span>
+				</div>
+				<div class="ea-ad-container">
+					<div class="ad-academicos">
+		        		<input placeholder="Procedencia" id="e-ACprocedencia" type="text">
+		        		<input placeholder="Motivo de retiro" id="e-ACretiro" type="text">
+		        		<input placeholder="Grupo" id="e-ACgrupo" type="text">
+		        		<input placeholder="Jornada" id="e-ACjornada" type="text">
+					    <input placeholder="Periodo Lectivo" id="e-ACperiodo" type="text">
+		        	</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<script>
+	//tags
+	$( "#c-admision" ).click(function(){
+		$('.aside').load('vistas/tablero/menu2.html');
+		$('.main').load('vistas/tablero/base.html');
+		$('.nav .menu1').removeClass('active1');
+        $('#tablero').addClass('active1');
+	});
+	 $(document).ready(function() {
+    	$('select').material_select();
+    	$( "#admisionEstudiante" ).addClass("active2");
+ 	 });
+ 	 $('.datepicker').pickadate({
+	    selectMonths: true, // Creates a dropdown to control month
+	    selectYears: 50 // Creates a dropdown of 15 years to control year
+	  });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $.uploadPreview({
+            input_field: "#image-upload",
+            preview_box: "#image-preview",
+            label_field: "#image-label"
+        });
+    });
+</script>

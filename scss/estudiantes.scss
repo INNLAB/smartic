@@ -1,0 +1,41 @@
+/* card estudents */
+
+
+//tarjeta estudiantes
+.tarjeta{
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+.card{
+	width: 320px;
+}
+.card-content{
+	height: 100px; 
+	padding-bottom: 0px;
+}
+.card.small {
+	height: 230px;
+}
+.activator{
+	cursor: pointer;
+}
+#link-cur{
+	cursor: pointer;
+}
+#link-pro{
+	cursor: pointer;
+}
+.hv{
+	cursor: pointer;
+	background-color: #e2e2e2;
+	&:hover{
+		background-color: #f0f0f0;
+	}
+}
+
+/* lista */
+
+/* Ficha */

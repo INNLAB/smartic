@@ -1,0 +1,126 @@
+<div class="ea-admin-container">
+	<form>
+		<div class="ad-container">
+			<div class="ad-datos-personales-docente">
+				<div class="ad-title">
+					<span>Datos Personales</span>
+				</div>
+				<div class="ea-ad-container">
+					<div class="ad-personales">
+		        		<input placeholder="Primer Nombre" id="d-Pnombre" type="text">
+		        		<input placeholder="Segundo Nombre" id="d-Snombre" type="text">
+		        		<input placeholder="Primer Apellido" id="d-Papellido" type="text">
+		        		<input placeholder="Segundo Apellido" id="d-Sapellido" type="text">
+		        		<select>
+					    	<option value="" disabled selected>Tipo de documento</option>
+					    	<option value="3">Cedula de Ciudadania</option>
+					    	<option value="1">Pasaporte/option>
+					    	<option value="2">Tarjeta de Identidad</option>				    	
+					    </select>
+		        		<input placeholder="Numero de documento" id="d-Dnumero" type="text">
+		        		<input placeholder="Fecha de Nacimiento" id="d-Fnacimiento" type="date" class="datepicker">
+		        		<div class="p-input">
+		        			<p>24 años </p>
+		        			<p> <span> Sexo: </span>
+						      <input name="group3" type="radio" id="d-Cm" />
+						      <label for="d-Cm">M</label>
+						      <input name="group3" type="radio" id="d-Cf" />
+						      <label for="d-Cf">F</label>
+						    </p>
+		        		</div>
+		        		<input placeholder="Dirección" id="d-direccion" type="text">
+		        		<input placeholder="Teléfono" id="d-telefono" type="text">
+		        		<input placeholder="Correo" id="d-correo" type="text">
+		        		<div class="switch">
+						    <label>
+						      	Asistente
+						      	<input type="checkbox">
+						      	<span class="lever"></span>
+						      	Titular
+						    </label>
+						</div>
+		        	</div>
+					<div class="ad-foto">
+						<script src="js/upload.js"></script>
+			            <div id="image-preview">
+			                <label for="image-upload" id="image-label"><i class="material-icons">camera_alt</i></label>
+			                <input type="file" name="image" id="image-upload" />
+			            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ad-container">
+			<div class="ad-datos-personales-docente">
+				<div class="ad-title">
+					<span>Información Academica</span>
+				</div>
+				<div class="ea-ad-container">
+					<div class="ad-academicos">
+		        		<input placeholder="Profesión" id="e-Anombres" type="text">
+		        		<input placeholder="Ciudad de estudio" id="e-Aapellidos" type="text">
+		        		<input placeholder="Institución" id="e-ADnumero" type="text">
+		        		<select>
+					    	<option value="" disabled selected>Tipo de estudio</option>
+					    	<option value="1">Tecnico</option>
+					    	<option value="2">tecnologo</option>
+					    	<option value="3">Pregrado</option>
+					    	<option value="4">Especialización</option>
+					    	<option value="5">Magister</option>
+					    	<option value="6">Doctorado</option>
+					    </select>
+		        		<input placeholder="Fecha fin de estudios" id="d-Fnacimiento" type="date" class="datepicker">
+		        		<input placeholder="Escalafon" id="e-Anombres" type="text">
+		        		<input placeholder="Años de experiencia" id="e-Aapellidos" type="text">
+		        		<input placeholder="Postgrado" id="e-Anombres" type="text">
+		        		<input placeholder="Cargo" id="e-Aapellidos" type="text">
+		        		<input placeholder="Fecha de ingreso" id="d-Fnacimiento" type="date" class="datepicker">
+		        		<div class="switch">
+						    <label>
+						      	Normal
+						      	<input type="checkbox">
+						      	<span class="lever"></span>
+						      	Director de G.
+						    </label>
+						</div>
+		        		<input placeholder="Curso" id="e-Anombres" type="text">
+		        		<select>
+					    	<option value="" disabled selected>Area</option>
+					    	<option value="1">Lenguaje</option>
+					    	<option value="2">Motricidad</option>
+					    	<option value="3">Arte</option>
+					    </select>
+					    <input placeholder="Materia" id="e-Anombres" type="text">
+					    <input placeholder="Horas a la semana" id="e-Anombres" type="text">
+		        	</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<script>
+	//tags
+	$( "#c-admision" ).click(function(){
+		$('.aside').load('vistas/tablero/menu2.html');
+		$('.main').load('vistas/tablero/base.html');
+		$('.nav .menu1').removeClass('active1');
+        $('#tablero').addClass('active1');
+	});
+	 $(document).ready(function() {
+    	$('select').material_select();
+    	$( "#admisionDocente" ).addClass("active2");
+ 	 });
+ 	 $('.datepicker').pickadate({
+	    selectMonths: true, // Creates a dropdown to control month
+	    selectYears: 50 // Creates a dropdown of 15 years to control year
+	  });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $.uploadPreview({
+            input_field: "#image-upload",
+            preview_box: "#image-preview",
+            label_field: "#image-label"
+        });
+    });
+</script>

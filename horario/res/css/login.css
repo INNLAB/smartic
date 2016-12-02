@@ -1,0 +1,50 @@
+body {
+  margin: 0; }
+
+.waves-effect.waves-blue .waves-ripple {
+  /* The alpha value allows the text and background color
+  of the button to still show through. */
+  background-color: rgba(0, 145, 234, 0.65); }
+
+#login {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans'; }
+  #login .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: white;
+    max-width: 470px;
+    width: 40%; }
+    #login .container h1 {
+      font-weight: 300;
+      font-size: 50px;
+      margin-bottom: 0; }
+    #login .container * {
+      margin-top: 10px; }
+    #login .container .form-control {
+      width: 100%; }
+    #login .container input {
+      font-family: 'Open Sans';
+      font-weight: 300;
+      width: 100%; }
+      #login .container input:focus {
+        border-bottom: 1px solid #bfc0d0;
+        box-shadow: 0 1px 0 0 #bfc0d0; }
+    #login .container button {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      color: gray;
+      margin-top: 20px;
+      transition: background 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+      #login .container button:hover {
+        color: rgba(0, 0, 0, 0.87); }
+
+/*# sourceMappingURL=login.css.map */

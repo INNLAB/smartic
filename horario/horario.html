@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Horario</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="res/css/horario.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet">
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="horario/horarioCtrl.js"></script>
+	<script type="text/javascript" src="horario/script.js"></script>
+</head>
+<body ng-controller="horarioCtrl">
+	<div class="btn-dias-container">
+		<a class="btn-flat waves-effect waves-light" for="lunes">Lunes</a>
+		<a class="btn-flat waves-effect waves-light" for="martes">Martes</a>
+		<a class="btn-flat waves-effect waves-light" for="miercoles">Miercoles</a>
+		<a class="btn-flat waves-effect waves-light" for="jueves">Jueves</a>
+		<a class="btn-flat waves-effect waves-light" for="viernes">Viernes</a>
+		<div>
+			<div class="input-field">
+				<select>
+			    	<option value="" disabled selected>Filtrar</option>
+					<option value="filtro1">Filtro1</option>
+					<option value="filtro2">Filtro2</option>
+					<option value="filtro3">Filtro3</option>
+					<option value="filtro4">Filtro4</option>
+			    </select>
+			</div>
+			<a class="btn-flat waves-effect waves-light guardar">Guardar</a>
+			<a class="btn-flat waves-effect waves-light cancelar">Cancelar</a>
+		</div>
+	</div>
+	<div class="horarios-container">
+		<table class="horario lunes centered bordered">
+			<thead>
+				<tr>
+					<th>Hora</th>
+					<th ng-repeat="salon in salones">{{salon.nombre}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="hora in horas">
+					<td>
+						{{hora.hora}}
+					</td>
+					<td ng-repeat="salon in salones">
+						<div class="input-field">
+							<select ng-model="horarios.lunes.horas[indexOf(hora)].materia">
+						    	<option value="" disabled selected>Materia</option>
+								<option ng-repeat="materia in materias" value="{{materia}}">{{materia}}</option>
+						    </select>
+						</div>
+					    <div class="input-field">
+						    <select ng-model="horarios.lunes.horas[indexOf(hora)].profesor">
+						    	<option value="" disabled selected>Profesor</option>
+								<option ng-repeat="profesor in profesores" value="{{profesor}}">{{profesor}}</option>
+						    </select>
+						</div>
+						<div class="input-field">
+						    <select ng-model="horarios.lunes.horas[indexOf(hora)].grupo">
+						    	<option value="" disabled selected>Grupo</option>
+								<option ng-repeat="grupo in grupos" value="{{grupo}}">{{grupo}}</option>
+						    </select>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="horario martes centered bordered">
+			<thead>
+				<tr>
+					<th>Hora</th>
+					<th ng-repeat="salon in salones">{{salon.nombre}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="hora in horas">
+					<td>
+						{{hora.hora}}
+					</td>
+					<td ng-repeat="salon in salones">
+					    <div class="input-field">
+							<select ng-model="horarios.martes.horas[indexOf(hora)].materia">
+						    	<option value="" disabled selected>Materia</option>
+								<option ng-repeat="materia in materias" value="{{materia}}">{{materia}}</option>
+						    </select>
+						</div>
+					    <div class="input-field">
+						    <select ng-model="horarios.martes.horas[indexOf(hora)].profesor">
+						    	<option value="" disabled selected>Profesor</option>
+								<option ng-repeat="profesor in profesores" value="{{profesor}}">{{profesor}}</option>
+						    </select>
+						</div>
+						<div class="input-field">
+						    <select ng-model="horarios.martes.horas[indexOf(hora)].grupo">
+						    	<option value="" disabled selected>Grupo</option>
+								<option ng-repeat="grupo in grupos" value="{{grupo}}">{{grupo}}</option>
+						    </select>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="horario miercoles centered bordered">
+			<thead>
+				<tr>
+					<th>Hora</th>
+					<th ng-repeat="salon in salones">{{salon.nombre}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="hora in horas">
+					<td>
+						{{hora.hora}}
+					</td>
+					<td ng-repeat="salon in salones">
+					    <div class="input-field">
+							<select ng-model="horarios.miercoles.horas[indexOf(hora)].materia">
+						    	<option value="" disabled selected>Materia</option>
+								<option ng-repeat="materia in materias" value="{{materia}}">{{materia}}</option>
+						    </select>
+						</div>
+					    <div class="input-field">
+						    <select ng-model="horarios.miercoles.horas[indexOf(hora)].profesor">
+						    	<option value="" disabled selected>Profesor</option>
+								<option ng-repeat="profesor in profesores" value="{{profesor}}">{{profesor}}</option>
+						    </select>
+						</div>
+						<div class="input-field">
+						    <select ng-model="horarios.miercoles.horas[indexOf(hora)].grupo">
+						    	<option value="" disabled selected>Grupo</option>
+								<option ng-repeat="grupo in grupos" value="{{grupo}}">{{grupo}}</option>
+						    </select>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="horario jueves centered bordered">
+			<thead>
+				<tr>
+					<th>Hora</th>
+					<th ng-repeat="salon in salones">{{salon.nombre}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="hora in horas">
+					<td>
+						{{hora.numero}}
+					</td>
+					<td ng-repeat="salon in salones">
+					    <div class="input-field">
+							<select ng-model="horarios.jueves.horas[indexOf(hora)].materia">
+						    	<option value="" disabled selected>Materia</option>
+								<option ng-repeat="materia in materias" value="{{materia}}">{{materia}}</option>
+						    </select>
+						</div>
+					    <div class="input-field">
+						    <select ng-model="horarios.jueves.horas[indexOf(hora)].profesor">
+						    	<option value="" disabled selected>Profesor</option>
+								<option ng-repeat="profesor in profesores" value="{{profesor}}">{{profesor}}</option>
+						    </select>
+						</div>
+						<div class="input-field">
+						    <select ng-model="horarios.jueves.horas[indexOf(hora)].grupo">
+						    	<option value="" disabled selected>Grupo</option>
+								<option ng-repeat="grupo in grupos" value="{{grupo}}">{{grupo}}</option>
+						    </select>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="horario viernes centered bordered">
+			<thead>
+				<tr>
+					<th>Hora</th>
+					<th ng-repeat="salon in salones">{{salon.nombre}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="hora in horas">
+					<td>
+						{{hora.numero}}
+					</td>
+					<td ng-repeat="salon in salones">
+					    <div class="input-field">
+							<select ng-model="horarios.viernes.horas[indexOf(hora)].materia">
+						    	<option value="" disabled selected>Materia</option>
+								<option ng-repeat="materia in materias" value="{{materia}}">{{materia}}</option>
+						    </select>
+						</div>
+					    <div class="input-field">
+						    <select ng-model="horarios.viernes.horas[indexOf(hora)].profesor">
+						    	<option value="" disabled selected>Profesor</option>
+								<option ng-repeat="profesor in profesores" value="{{profesor}}">{{profesor}}</option>
+						    </select>
+						</div>
+						<div class="input-field">
+						    <select ng-model="horarios.viernes.horas[indexOf(hora)].grupo">
+						    	<option value="" disabled selected>Grupo</option>
+								<option ng-repeat="grupo in grupos" value="{{grupo}}">{{grupo}}</option>
+						    </select>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
+</html>

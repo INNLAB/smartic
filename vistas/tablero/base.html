@@ -1,0 +1,230 @@
+<div class="ea-container-tablero">
+  	<div class="ea-tarjet">
+    	<div class="ea-tarjet-conten card-panel">
+      		<span class="white-text"></span>
+      		<canvas class="animated fadeIn" id="myChart1"  height="135"></canvas>
+    	</div>
+  	</div>
+  	<div class="ea-tarjet">
+    	<div class="ea-tarjet-conten card-panel">
+      		<span class="white-text"></span>
+      		<canvas class="animated fadeIn" id="myLineChart"  height="135"></canvas>
+    	</div>
+  	</div>
+  	<div class="ea-tarjet">
+    	<div class="ea-tarjet-conten card-panel">
+      		<span class="white-text"></span>
+            <canvas class="animated fadeIn" id="myChart5"  height="135"></canvas>
+
+    	</div>
+  	</div>
+  	<div class="ea-tarjet">
+    	<div class="ea-tarjet-conten card-panel">
+      		<span class="white-text"></span>
+            <canvas class="animated fadeIn" id="myDoughnutChart"  height="135"></canvas>
+      		<!-- <canvas class="animated fadeIn" id="myRadarChart"  height="135"></canvas> -->
+    	</div>
+  	</div>
+</div>
+
+<script>
+$(document).ready(function() {
+
+var ctx = document.getElementById("myChart1");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["2011", "2012", "2013", "2014", "2015", "2016"],
+        datasets: [{
+            label: 'Número de Admitidos por año',
+            data: [52, 67, 60, 89, 120, 90],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+///---------
+var ctx2 = document.getElementById("myLineChart");
+var myLineChart = new Chart(ctx2, {
+    type: 'line',
+    data: {
+    labels: ["Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre"],
+    datasets: [
+        {
+            label: "Inasistencia",
+            fill: false,
+            lineTension: 0.1,
+            backgroundColor: "rgba(75,192,192,0.4)",
+            borderColor: "rgba(75,192,192,1)",
+            borderCapStyle: 'butt',
+            borderDash: [],
+            borderDashOffset: 0.0,
+            borderJoinStyle: 'miter',
+            pointBorderColor: "rgba(75,192,192,1)",
+            pointBackgroundColor: "#fff",
+            pointBorderWidth: 1,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: "rgba(75,192,192,1)",
+            pointHoverBorderColor: "rgba(220,220,220,1)",
+            pointHoverBorderWidth: 2,
+            pointRadius: 1,
+            pointHitRadius: 10,
+            data: [23, 13, 31, 28, 16, 25, 12],
+        }
+    ]
+},
+    options: {
+        scales: {
+            xAxes: [{
+                display: true
+            }]
+        }
+    }
+});
+
+///------
+
+
+var ctx5 = document.getElementById("myChart5");
+var myChart5 = new Chart(ctx5, {
+    type: 'bar',
+    data: {
+        labels: ["Párvulo", "Pre-jardín", "Jardín", "Transición", "Primero", "Segundo"],
+        datasets: [{
+            label: 'Numero de Alumnos',
+            data: [45, 65, 34, 48, 76, 64],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+// var ctx3 = document.getElementById("myRadarChart");
+// var myRadarChart = new Chart(ctx3, {
+//     type: 'radar',
+//     data: {
+//     labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+//     datasets: [
+//         {
+//             label: "My First dataset",
+//             backgroundColor: "rgba(179,181,198,0.2)",
+//             borderColor: "rgba(179,181,198,1)",
+//             pointBackgroundColor: "rgba(179,181,198,1)",
+//             pointBorderColor: "#fff",
+//             pointHoverBackgroundColor: "#fff",
+//             pointHoverBorderColor: "rgba(179,181,198,1)",
+//             data: [65, 59, 90, 81, 56, 55, 40]
+//         },
+//         {
+//             label: "My Second dataset",
+//             backgroundColor: "rgba(255,99,132,0.2)",
+//             borderColor: "rgba(255,99,132,1)",
+//             pointBackgroundColor: "rgba(255,99,132,1)",
+//             pointBorderColor: "#fff",
+//             pointHoverBackgroundColor: "#fff",
+//             pointHoverBorderColor: "rgba(255,99,132,1)",
+//             data: [28, 48, 40, 19, 96, 27, 100]
+//         }
+//     ]
+// },
+//     options: {
+//             scale: {
+//                 reverse: true,
+//                 ticks: {
+//                     beginAtZero: true
+//                 }
+//             }
+//     }
+// });
+
+///----
+var ctx5 = document.getElementById("myDoughnutChart");
+var myDoughnutChart = new Chart(ctx5, {
+    type: 'doughnut',
+    data: {
+    labels: [
+        "Excelente",
+        "Aceptable",
+        "Deficiente"
+    ],
+    datasets: [
+        {
+            data: [40, 50, 10],
+            backgroundColor: [
+                "#4BC0C0",
+                "#FFC533",
+                "#FF6384"
+            ],
+            hoverBackgroundColor: [
+                "#327F7F",
+                "#FF9F40",
+                "#7F3142"
+            ]
+        }]
+},
+    options: {
+        scales: {
+            // yAxes: [{
+            //     ticks: {
+            //         // Create scientific notation labels
+            //         callback: function(value, index, values) {
+            //             return value.toExponential();
+            //         }
+            //     }
+            // }]
+        }
+    }
+});
+//fin
+});
+</script>
